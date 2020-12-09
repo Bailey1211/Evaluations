@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JUSTE PRIX</title>
+</head>
+<body>
+
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+        
+    <script type="text/javascript">
+        var nb_coup = 0;
+        var nb = Math.floor(100*Math.random());
+        
+        //alert(nb); // pour voir la solution
+        
+        function justePrix (){
+            var nombre = document.getElementById('solution').value;
+            
+            nb_coup++;
+            
+            if(nombre < nb) { // c'est plus 
+                alert("Plus Grand !");
+                document.getElementById('solution').value = '';
+            }
+            if(nombre > nb) { // c'est moins
+                document.getElementById("moin").src="moin.png";
+                alert("Plus Petit !");
+                document.getElementById('solution').value = '';
+            }
+            if(nombre == nb) { // La personne a gagné 
+                alert("Félicitation, le nombre était "+ nb +" Tu as gagné en "+ nb_coup +" coup(s)");
+            }
+        }
+    </script>
+
+            <h1 style="text-align:center; text-decoration: underline ">Le Juste Prix </h1>
+            <h2 style="text-align:center; text-decoration: underline ">Le nombre choisi aléatoirement est compris entre 0 et 100, bonne chance !</h2>
+            
+            <p style="text-align: center;"><input type="text" id="solution" name="solution"/>
+            <p style="text-align: center;"><input type="button" value="Jouer" onclick="justePrix()"></p>
+            
+            <p align="center"> <img id="gagne" src="" alt="" border=""> </p>
+            <p align="center"> <img id="plus" src="" alt="" border=""> </p>
+            <p align="center"> <img id="moin" src="" alt="" border=""> </p>
+</body>
+</html>

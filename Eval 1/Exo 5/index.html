@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" />
+    <title>Evaluation Javascript</title>
+</head>
+<body>
+    <form style="margin-left:40%; margin-top:50px;">
+        <div class="form-group" style="width:300px;">
+
+          <label for="name">Nom</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Nom" required>
+
+        </div>
+        <div class="form-group" style="width:300px;">
+
+            <label for="firstName">Prénom</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="prenom" required>
+
+          </div>
+          <div class="form-group" style="width:300px;"></div>
+
+          <label for="birthDate">Date de naissance</label>
+          <input type="date"  class="form-control" name="birthDate" id="birthDate" style="width:300px;" required>
+
+        </div>
+
+        <button type="submit" id="submit" class="btn btn-primary" style="margin-top:10px;">Valider</button>
+
+      </form>
+
+      <div id="result"></div>
+    
+</body>
+
+<script src="vendor/components/jquery/jquery.min.js"></script>
+<script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
+</html>
